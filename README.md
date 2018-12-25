@@ -46,6 +46,8 @@ sudo ldconfig
 
 ### Install Thrift
 
+`Thrift 1.0 doesn't work!!!`
+
 To build and install the thrift compiler, run:
 
 ```
