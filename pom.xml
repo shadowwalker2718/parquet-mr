@@ -93,7 +93,7 @@
     <pig.classifier>h2</pig.classifier>
     <thrift-maven-plugin.version>0.10.0</thrift-maven-plugin.version>
     <thrift.version>0.9.3</thrift.version>
-    <format.thrift.version>0.9.3</format.thrift.version>
+    <format.thrift.version>0.11.0</format.thrift.version>
     <fastutil.version>7.0.13</fastutil.version>
     <semver.api.version>0.9.33</semver.api.version>
     <slf4j.version>1.7.22</slf4j.version>
@@ -154,6 +154,12 @@
       <artifactId>commons-httpclient</artifactId>
       <version>3.1</version>
       <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.thrift.tools/maven-thrift-plugin -->
+    <dependency>
+      <groupId>org.apache.thrift.tools</groupId>
+      <artifactId>maven-thrift-plugin</artifactId>
+      <version>0.1.11</version>
     </dependency>
   </dependencies>
 
@@ -507,7 +513,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-project-info-reports-plugin</artifactId>
-            <version>2.7</version>
+            <version>3.0.0</version>
             <reportSets>
               <reportSet>
                 <reports>
@@ -544,7 +550,7 @@
           <plugin>
             <groupId>com.github.github</groupId>
             <artifactId>site-maven-plugin</artifactId>
-            <version>0.8</version>
+            <version>0.12</version>
             <configuration>
               <message>Creating site for ${project.version}</message>
               <path>${project.distributionManagement.site.url}</path>
@@ -580,9 +586,9 @@
       </properties>
     </profile>
     <profile>
-      <id>thrift9</id>
+      <id>thrift12</id>
       <properties>
-        <thrift.version>0.9.0</thrift.version>
+        <thrift.version>0.12.0</thrift.version>
       </properties>
     </profile>
   </profiles>
